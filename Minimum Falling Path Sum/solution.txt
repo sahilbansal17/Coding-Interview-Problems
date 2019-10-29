@@ -1,0 +1,23 @@
+Initially, thinking of trying all possibilities as a naive and brute force solution to start with.
+
+Trying to realize its complexity, thinking it around O(N*3^(N-1)) as can start with any
+element in the first row and then for any element can go to around 3 other elements in the 
+next row. 
+
+Trying to think how to optimize this approach, the observation is once we are at a particular 
+element in a row, the only think that matters now is the element in the next row, the path to
+reach that element doesn't really matter.
+
+So, its kind of an overlapping subproblem since we can reach that point from atmost 3 points above 
+that element, but need to now solve the same problem.
+
+Also, another observation is that we are ultimately going to end at the last row, in some column.
+So, if we can consider minSum[i][j] denoting the minimum sum to reach the element (i, j)
+following the conditions given, then our answer is simply the minimum of all the values
+minSum[i][j] in the last row, i.e. i = Index of last row, j ranging from 0 to last column index.
+
+The recurrence is now kind of obvious.
+We can relate minSum[i][j] to minSum[i - 1][j - 1], minSum[i - 1][j] and minSum[i - 1][j + 1],
+handling the corner/boundary cases and implementing it in a space efficient way, since
+at any point of time we require no longer than 2 row values.
+
