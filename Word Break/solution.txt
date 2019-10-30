@@ -1,0 +1,45 @@
+The question is a perfect example of a problem where the interviewee can ask for
+clarification questions.
+
+For example, can the same word in the dictionary of words be used multiple times?
+If this were false, the solution could go in an entirely different direction.
+
+I tried to think of a brute force solution, and the idea that clicked was to figure
+out the smallest length string from the left that is a possible word in the dictionary,
+then I just have a smaller problem of checking whether a smaller string (left over) 
+can be segmented into different dictionary words.
+
+Once we hit a deadpoint, that is the current string cannot be a dictionary word or segmented
+into one, we can return 0, and during backtracking we will try with a larger length
+string that is possible.
+
+Then, the realization comes that this problem can have overlapping subproblems.
+For e.g. the string 'catsandog' leads to a smaller subproblem 'andog' provided that 'cats'
+is a word in the dictionary.
+Now, 'andog' leads to the word 'dog' provided 'an' is in the dictionary.
+So, 'catsandog' can lead to the smaller subproblem 'dog' directly in one step provided
+'catsan' is a word in the dictionary, during the backtracking step.
+
+So, now the think is how many states should be memoized?
+Clearly, the recursion here just contains the string, and just the starting index of the
+string seems to be sufficient.
+
+So, we can now even think of an iterative DP solution.
+
+Let us denote canBreak[i] as true if we can break the string starting from the i-th index
+using the words in the dictionary.
+
+So, the recursive step can be expressed as:
+canBreak[i] = (OR from k = i+1 to n): canBreak[i + k] AND isWord[i..(i+k)]
+
+The above expression with handling some boundary cases and verifying it mathematically,
+is just what we were trying to do recursively, when we get the smallest word matching,
+we moved to solving a new problem, now we can simply remember the solution to all smaller
+problems and use them whenever needed.
+
+The time complexity of the above solution can be verified to be O(N^2).
+And, we are using an extra space of O(N) to build this, so comes the space complexity as O(N).
+
+I was thinking whether we could further optimize the solution.
+But, for that we need to somehow think of getting rid of the loop on k in the above
+recursive expression, but wasn't able to think of any idea to do that!
