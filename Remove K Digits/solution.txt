@@ -1,0 +1,2 @@
+The problem is quite tricky and revolved around the idea of comparing the numbers,
+observing some kind of properties, leading to a greedy solution.
