@@ -1,0 +1,25 @@
+This question is a little tricky one.
+
+You might get the idea at first glance and might not.
+You need to delete a particular node in a linked list not knowing the head of the list.
+You only know the pointer to that node which is to be deleted.
+
+I am referring the current node as the node to be deleted in the further discussion.
+
+So, there is no way to access its previous node and thus, the normal delete cannot be performed,
+where you could have just shifted the next node of the previous node to the current node's next node.
+
+The solution is little tricky.
+You copy the value of the next node in the current node, and delete the current node's next node.
+So, in a way you get the resulting list as what you might have expected.
+
+But, be careful. In this process,
+You cannot delete a node if it is the last node of the linked list.
+Because, in this case, the previous node will still point to some node which should now be NULL.
+
+Also, there are some side-effects possible,
+if some other node in our code points to the input node, that will now effectively
+have it's next node's value.
+
+And, if there are pointers to the input node's original next node, those pointers now
+point to a "dangling" node.
