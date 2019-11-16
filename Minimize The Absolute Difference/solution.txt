@@ -1,0 +1,17 @@
+The brute force solution obviously is quite costly, i.e. O(N^3).
+
+Since the arrays are already sorted, thus there has to be a better algorithm.
+
+We start with the first element of each of the arrays as the first possible triplet.
+Now, we need to get to the triplet that minimizes the difference between maximum and minimum element in it.
+
+So, one way is to increase the minimum element in the triplet. So, move to the next element of the array
+whose current element is the minimum of the triplet, i.e.
+we have 3 pointers each pointing to the current element of the arrays, initially to 0th index of each.
+
+Now, we move the pointer to the right of the array having minimum element in the current triplet.
+We keep recalculating the required value for the current triplet and update if better than the minimum value.
+
+So, we keep doing so, until one of the array is exhausted, i.e. any of the 3 pointers has moved to the end of its array.
+
+This greedy solution will work intuitely but giving a proof could be little tricky!
