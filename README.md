@@ -8,5 +8,11 @@ This repository contains the coding interview problems along with solutions.
 | [Word Break](Word%20Break) | [text](Word%20Break/solution.txt) | [CPP](Word%20Break/solution.cpp) | Dynamic Programming | Medium |
 | [Remove K Digits](Remove%20K%20Digits) | [text](Remove%20K%20Digits/solution.txt) | [CPP](Remove%20K%20Digits/solution.cpp) | Greedy, Stack | Medium |
 | [Binary Search Tree Checker](BST%20Checker) | To be updated | [CPP](BST%20Checker/solution.cpp) | Trees | Medium |
-| [Delete node in singly-linked list](Linked%20List/Delete%20Node/) | (Linked%20List/Delete%20Node/solution.txt) | [CPP](Linked%20List/Delete%20Node/solution.cpp) | Linked-List | Easy, Tricky |
+| [Delete node in singly-linked list](Linked%20List/Delete%20Node/) | [text](Linked%20List/Delete%20Node/solution.txt) | [CPP](Linked%20List/Delete%20Node/solution.cpp) | Linked-List | Easy, Tricky |
 | [Minimize The Absolute Difference](Minimize%20The%20Absolute%20Difference/) | [text](Minimize%20The%20Absolute%20Difference/solution.txt) | [CPP](Minimize%20The%20Absolute%20Difference/solution.cpp) | Two Pointers | Easy |
+| [Majority Element](Majority%20Element/) | [text](Majority%20Element/solution.txt) | [CPP](Majority%20Element/solution.cpp) | Hashing, Trick | Easy, Tricky |
+
+# CS Fundamentals
+
+1. [DBMS Glossary](CS%20Fundamentals/DBMS.txt)
+2. [Object Oriented Programming Glossary](CS%20Fundamentals/OOPs.txt)
