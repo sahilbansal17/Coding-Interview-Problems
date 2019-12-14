@@ -12,6 +12,7 @@ This repository contains the coding interview problems along with solutions.
 | [Minimize The Absolute Difference](Minimize%20The%20Absolute%20Difference/) | [text](Minimize%20The%20Absolute%20Difference/solution.txt) | [CPP](Minimize%20The%20Absolute%20Difference/solution.cpp) | Two Pointers | Easy |
 | [Majority Element](Majority%20Element/) | [text](Majority%20Element/solution.txt) | [CPP](Majority%20Element/solution.cpp) | Hashing, Trick | Easy, Tricky |
 | [Count Numbers Less Than K](Count%20Numbers%20Less%20Than%20K/) | [text](Count%20Numbers%20Less%20Than%20K/solution.txt) | [CPP](Count%20Numbers%20Less%20Than%20K/solution.cpp) | Mathematics | Easy-Medium |
+| [Remove Zero Sum Consecutive Nodes](Remove%20Zero%20Sum%20Consecutive%20Nodes) | [text](Remove%20Zero%20Sum%20Consecutive%20Nodes/solution.txt) | [CPP](Remove%20Zero%20Sum%20Consecutive%20Nodes/solution.cpp) | Linked Lists | Medium |
 
 # CS Fundamentals
 
