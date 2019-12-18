@@ -1,4 +1,5 @@
 # Delete Node in a linked list
+[Try the problem](https://leetcode.com/problems/delete-node-in-a-linked-list/)
 
 Delete a node from a singly-linked list, given only a variable pointing to that node.
 

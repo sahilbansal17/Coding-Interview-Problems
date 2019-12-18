@@ -1,4 +1,5 @@
 # Count the number of islands
+[Try the problem](https://leetcode.com/problems/number-of-islands/)
 
 Given a 2D array `binaryMatrix` of 0s and 1s, implement a function `getNumberOfIslands` that returns the number of islands of 1s in `binaryMatrix`.
 
