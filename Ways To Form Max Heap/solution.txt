@@ -1,0 +1,27 @@
+This problem requires recursion and heap properties.
+
+To find the no. of ways to form max heap with N distinct numbers,
+we first try to observe that the top of the heap should be the maximum element
+among the N distinct elements.
+
+Now, we try to recursively solve the problem by considering 'x' elements on its left,
+i.e. the left subtree having 'x' distinct elements, so the right subtree has 
+'N - x - 1' distinct elements.
+Clearly, these are two similar sub problems, since left subtree will also be a heap
+and so will be the right subtree.
+
+But, we can't simply iterative over all values of 'x' from 1 to 'N - 1'.
+First of all, the no. of elements in the left subtree cannot be more than the right one,
+since the heap is a complete binary tree, and all levels are filled fully,
+except the last one, which may not be fully filled, but filled from left to right.
+
+We need to make sure that the height of the left subtree and right subtree doesn't differ
+by more than 2.
+And, if they are the same height, then the last level of left should be completely filled,
+and last level of right can have some elements yet to be filled.
+If the height difference is one, then the last level of right must be completely filled,
+and last level of left, may have some elements left.
+
+So, we need to find the heights and carefully check these conditions.
+If conditions are satisfied we multiply the ways(Left) and ways(Right) and add to the result.
+Look at the code for more details!
