@@ -14,6 +14,7 @@ This repository contains the coding interview problems along with solutions.
 | [Count Numbers Less Than K](Count%20Numbers%20Less%20Than%20K/) | [text](Count%20Numbers%20Less%20Than%20K/solution.txt) | [CPP](Count%20Numbers%20Less%20Than%20K/solution.cpp) | Mathematics | Easy-Medium |
 | [Remove Zero Sum Consecutive Nodes](Linked%20List/Remove%20Zero%20Sum%20Consecutive%20Nodes/) | [text](Linked%20List/Remove%20Zero%20Sum%20Consecutive%20Nodes/solution.txt) | [CPP](Linked%20List/Remove%20Zero%20Sum%20Consecutive%20Nodes/solution.cpp) | Linked Lists | Medium |
 | [Ways To Form Max Heap](Ways%20To%20Form%20Max%20Heap/) | [text](Ways%20To%20Form%20Max%20Heap/solution.txt) | [CPP](Ways%20To%20Form%20Max%20Heap/solution.cpp) | Heap, Mathematics | Medium-Hard |
+| [Find K Closest Elements](Find%20K%20Closest%20Elements/) | text | [CPP](Find%20K%20Closest%20Elements/solution.cpp) | MISC | Easy |
 
 # CS Fundamentals
 
