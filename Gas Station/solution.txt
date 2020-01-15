@@ -1,0 +1,51 @@
+The O(N^2) solution is quite obvious.
+You can start from each position and try to see if you reach back
+or if at any position, the current fuel falls less than 0.
+
+Now, the thing is do we really need to check for each of the positions.
+
+Let's say at position x, gas[x] >= cost[x].
+So, the amount saved here = gas[x]-cost[x].
+This gets added when we go to the next station.
+So, to go from (x+1) to (x+2), we must have cost[x + 1] fuel.
+Fuel we have actually is 'gas[x]-cost[x] + gas[x+1]'
+Thus, the condition is
+
+gas[x] - cost[x] + gas[x+1] >= cost[x+1]
+
+Rearranging the terms, it becomes
+gas[x] + gas[x+1] >= cost[x] + cost[x+1]
+
+Again, similarly, we will realize that, to go from (x+2) to (x+3):
+gas[x] + gas[x+1] + gas[x+2] >= cost[x] + cost[x+1] + cost[x+2]
+
+So, if at any point 'i', the sum of gas[x] from starting postion(x=start) to current position(x=i)
+drops below sum of cost[x] from starting to that position, we cannot proceed further.
+
+Now, does that also mean, we need not check for positions in between start and i?
+YES, because, 
+
+gas[start] + gas[start+1] + ... + gas[i] < cost[start] + cost[start+1] + ... + cost[i]
+=> gas[start+1] + ... + gas[i] < cost[start+1] + ... + cost[i] + (cost[start] - gas[start])
+
+And, since we started at the 'start' position, thus:
+gas[start] >= cost[start]
+=> cost[start] - gas[start] <= 0
+
+Thus, removing this quantity in RHS, doesn't change the inequality, leading to:
+gas[start+1] + ... + gas[i] < cost[start + 1] + ... cost[i]
+
+Similarly, we can show it for all positions from (start+1) till 'i'.
+
+Hence, we only need to check for some positions in the array.
+But, is it now O(N)?
+
+So, if you came from index 0 to index (n - 2), now, you need not see any position in between,
+so, when at index (n - 1), if you find it, then that's it, otherwise it's not possible, 
+since any ways, you will be reusing some index from 0 onwards as start.
+
+Similarly, even if you go from small jumps from index 0 to say index 2, then to 4, etc.
+So, you are only doing O(N) computation, and at the end if you have traversed through index 0
+having some index as start, then you can stop after that iteration itself.
+
+Hence, it is O(N), do thing about it and try to convince yourself or maybe find a counter-example!!
