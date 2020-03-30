@@ -17,6 +17,7 @@ This repository contains the coding interview problems along with solutions.
 | [Find K Closest Elements](Find%20K%20Closest%20Elements/) | text | [CPP](Find%20K%20Closest%20Elements/solution.cpp) | MISC | Easy |
 | [Populating Next Right Pointers](Populating%20Next%20Right%20Pointers/) | text | [CPP](Populating%20Next%20Right%20Pointers/solution.cpp) | Trees | Medium |
 | [Gas Station](Gas%20Station/) | [text](Gas%20Station/solution.txt) | [CPP](Gas%20Station/solution.cpp) | Greedy Algorithm | Medium |
+| [Set Matrix Zeroes](Set%20Matrix%20Zeroes/) | [text](Set%20Matrix%20Zeroes/solution.txt) | [CPP](Set%20Matrix%20Zeroes/solution_constant_space.cpp) | Matrix Manipulation | Easy, Tricky |
 
 # CS Fundamentals
 
