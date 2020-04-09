@@ -1,0 +1,5 @@
+Think it in terms of having 2 options at each step
+either to choose the copy option (not required in case current length is same as copied length)
+or to choose the paste option.
+
+So, we can use recursion and memoization (caching the results for (cur_len, copy_len) pair).
