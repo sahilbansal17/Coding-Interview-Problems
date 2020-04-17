@@ -21,6 +21,7 @@ This repository contains the coding interview problems along with solutions.
 | [Diameter of Generic Tree](Diameter%20of%20Generic%20Tree) | text | [CPP](Diameter%20of%20Generic%20Tree/solution.cpp) | Trees, Graphs | Medium |
 | [2 Keys Keyboard](2%20Keys%20Keyboard) | [text](2%20Keys%20Keyboard/solution.txt) | [CPP](2%20Keys%20Keyboard/solution.cpp) | DP, Maths | Medium |
 | [Very Hard Queries](Very%20Hard%20Queries) | [Solution article](Very%20Hard%20Queries/solution.md) | [CPP](Very%20Hard%20Queries/solution.cpp) | Queries, Maths | Medium |
+| [Deterministic Finite Automaton](Deterministic%20Finite%20Automaton/) | [Solution article](Deterministic%20Finite%20Automaton/solution.md) | [CPP](Deterministic%20Finite%20Automaton/solution.cpp) | Recursion, Dynamic Programming | Medium |
 
 # CS Fundamentals
 
