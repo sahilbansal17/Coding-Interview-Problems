@@ -1,5 +1,5 @@
 #include <vector>
-
+#include <iostream>
 using namespace std;
 
 int maxSellingGap(const vector<int>& price) {
@@ -13,34 +13,31 @@ int maxSellingGap(const vector<int>& price) {
     }
 
     int left = 0;
-    int right = num - 1;
+    int right = 0;
 
     int maxGap = 0;
-    int minPrefix = -1;
-    while (left < num) {
+    int minPrefix = price[0];
+    while (left < num && right < num) {
         int elem = price[left];
-        // 5 7 1 9 6 3 2
-        // 9 9 9 9 6 3 2
-        //         ^
+        //      5 7 1 9 6 3 2
+        //      5 5 1 1 1 1 1 (minPrefix)
+        //      9 9 9 9 6 3 2 (suffix_max)
+        //          ^
 
-        if (minPrefix == -1) {
-            // first iteration
-            while (suffix_max[right] < elem) {
-                --right;
-            }
-        } else if (minPrefix > elem) {
-            // shift the right to right
-            while (right < num && suffix_max[right] < elem) {
-                ++right;
-            }
-        }
         minPrefix = min(minPrefix, elem);
-
-        if (right < num && price[right] >= elem) {
+        if (minPrefix <= suffix_max[right]) {
             maxGap = max(maxGap, right - left);
+            ++right;
+        } else {
+            ++left;
         }
-        ++left;
     }
 
     return maxGap;
+}
+
+int main () {
+    vector<int> price = {5,7,1,9,6,3,2};
+    cout << maxSellingGap(price) << endl;
+    return 0;
 }
