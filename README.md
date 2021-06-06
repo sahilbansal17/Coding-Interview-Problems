@@ -25,6 +25,7 @@ This repository contains the coding interview problems along with solutions.
 | [Maximum Selling Gap](Maximum%20Selling%20Gap) | [Solution article](Maximum%20Selling%20Gap/solution.md) | [CPP](Maximum%20Selling%20Gap/solution.cpp) | Arrays | Medium |
 | [Game of Life](Game%20of%20Life) | - | [CPP](Game%20of%20Life/solution.cpp) | Arrays | Medium |
 | [3 Sum](3%20Sum) | [Article](3%20Sum/README.md) | [CPP](3%20Sum/solution.cpp) | Two Pointers | Medium |
+| [Shift Linked List](Linked%20List/Shift%20Linked%20List) | [Scratchpad](Linked%20List/Shift%20Linked%20List/scratchpad.txt) | [CPP](Linked%20List/Shift%20Linked%20List/solution.cpp) | Linked List | Easy, Medium |
 
 # CS Fundamentals
 

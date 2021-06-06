@@ -1,0 +1,33 @@
+Shift a linked list by K positions
+K > 0 => shift forward
+K < 0 => shift backward
+
+1 -> 2 -> 3
+shift by K = 1
+=> 3 -> 1 -> 2
+
+1. Break at the partition point i.e. new head
+2. Connect the tail with original head
+3. Replace the head with new head
+
+n = 5
+
+i = 0 -> n - k = 5 - 2 = 3
+
+0    1   2
+
+1 -> 2 -> 3 -> 4 -> 5
+k = 2
+
+4 -> 5 -> 1 -> 2 -> 3
+
+///
+
+Example Input
+
+p  nh          p    nh
+0 -> 1 -> 2 -> 3 -> 4 -> 5
+
+k = 2
+
+n = 6
