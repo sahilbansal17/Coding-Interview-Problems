@@ -2,7 +2,7 @@
 using namespace std;
 
 class LinkedList {
-public:
+ public:
   int value;
   LinkedList *next;
 
@@ -14,32 +14,32 @@ public:
 
 LinkedList *shiftLinkedList(LinkedList *head, int k) {
   int n = 0;
-	LinkedList *temp = head;
-	LinkedList *tail = NULL;
-	while (temp) {
-		tail = temp;
-		temp = temp->next;
-		++n;
-	}
-	if (n <= 1) {
-		return head;
-	}
-	k = k % n;
-	if (k < 0) {
-		k += n;
-	}
-	if (k == 0) {
-		return head;
-	}
-	LinkedList *new_head = head;
-	LinkedList *prev = NULL;
-	for (int i = 0; i < n - k; ++i) {
-		prev = new_head;
-		new_head = new_head->next;
-	}
-	prev -> next = NULL;
-	tail -> next = head;
-	
+  LinkedList *temp = head;
+  LinkedList *tail = NULL;
+  while (temp) {
+    tail = temp;
+    temp = temp->next;
+    ++n;
+  }
+  if (n <= 1) {
+    return head;
+  }
+  k = k % n;
+  if (k < 0) {
+    k += n;
+  }
+  if (k == 0) {
+    return head;
+  }
+  LinkedList *new_head = head;
+  LinkedList *prev = NULL;
+  for (int i = 0; i < n - k; ++i) {
+    prev = new_head;
+    new_head = new_head->next;
+  }
+  prev->next = NULL;
+  tail->next = head;
+
   return new_head;
 }
 
@@ -53,7 +53,7 @@ vector<int> linkedListToArray(LinkedList *head) {
   return array;
 }
 
-int main () {
+int main() {
   auto head = new LinkedList(0);
   head->next = new LinkedList(1);
   head->next->next = new LinkedList(2);
@@ -63,7 +63,7 @@ int main () {
   auto result = shiftLinkedList(head, 2);
   auto array = linkedListToArray(result);
 
-  for (auto e: array) {
+  for (auto e : array) {
     cout << e << " ";
   }
   cout << endl;
