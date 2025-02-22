@@ -1,0 +1,51 @@
+The brute force approach is:
+1. Use a boolean array of size N to represent the state
+2. For SET queries (type 1):
+   - Set array[index] = true
+3. For GET queries (type 2):
+   - Iterate from the given index to N
+   - Return the first index where array[i] is true
+   - If no true found, return -1
+
+Time Complexity: 
+- SET: O(1)
+- GET: O(N) in worst case
+- Overall: O(Q*N) where Q is number of queries
+Space Complexity: O(N) for the boolean array
+
+The optimized approach is:
+1. Use a Set data structure to store only the indices that are set to true
+2. For SET queries (type 1):
+   - Insert the index into the set
+3. For GET queries (type 2):
+   - Use binary search (lower_bound) to find the smallest number in the set that is >= index
+   - If no such number exists, return -1
+
+Key Insights:
+- Instead of maintaining the entire boolean array, we only track "true" positions
+- Binary search allows us to efficiently find the next true value
+- Set automatically maintains sorted order of elements
+
+Time Complexity:
+- SET: O(log K) where K is current size of set
+- GET: O(log K) using binary search
+- Overall: O(Q * log K) where K ≤ Q
+Space Complexity: O(K) where K is number of SET operations
+
+Implementation Details:
+1. We can use C++'s set container which:
+   - Maintains sorted order
+   - Provides efficient insertion O(log n)
+   - Has built-in lower_bound function
+2. Custom binary search implementation also works and might be good to show in interviews
+3. Edge cases to handle:
+   - Empty set
+   - No valid answer (return -1)
+   - Index at boundaries
+
+Interview Tips:
+1. Start with brute force to show problem understanding
+2. Identify inefficiency (linear scan in GET queries)
+3. Propose optimization using binary search
+4. Discuss trade-offs (space vs time)
+5. Mention alternative data structures (e.g., TreeSet in Java)
