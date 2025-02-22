@@ -27,6 +27,7 @@ This repository contains the coding interview problems along with solutions.
 | [3 Sum](3%20Sum) | [Article](3%20Sum/README.md) | [CPP](3%20Sum/solution.cpp) | Two Pointers | Medium |
 | [Shift Linked List](Linked%20List/Shift%20Linked%20List) | [Scratchpad](Linked%20List/Shift%20Linked%20List/scratchpad.txt) | [CPP](Linked%20List/Shift%20Linked%20List/solution.cpp) | Linked List | Easy, Medium |
 | [Unique Paths III](Unique%20Paths%20III) | [Article](https://leetcode.com/problems/unique-paths-iii/solutions/2976056/backtracking-solution-in-c/) | [CPP](Unique%20Paths%20III/solution.cpp) | Backtracking | Medium |
+| [Get Set Queries](Get%20Set%20Queries) | - | [CPP](Get%20Set%20Queries/solution.cpp) | Ordered Sets | Medium |
 
 # CS Fundamentals
 
